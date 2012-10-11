@@ -43,8 +43,9 @@ public class VerifyMojo extends AbstractMojo {
   public void execute() throws MojoExecutionException, MojoFailureException {
     Logger logger = LoggerFactory.getLogger(this.getClass());
     System.out.println("LoggerFactory type is: " + LoggerFactory.getILoggerFactory());
-    logger.info("hello world from VerifyMojo");
+    logger.info("hello world from VerifyMojo, slf4j logger");
     new Person().sayHello();
+    getLog().info("hello world from VerifyMojo, plexus logger");
 
   }
 
